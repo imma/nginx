@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+function _nginx_profile {
+  local shome="${_nginx_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
+}
+
+_nginx_profile
