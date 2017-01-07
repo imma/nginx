@@ -10,7 +10,8 @@ function main {
 
   case "${1:-}" in
     default)
-      exec nginx -g 'daemon off;'
+      mkdir -p /data/nginx/{log,run,html}
+      exec nginx -c $shome/etc/nginx/nginx.conf -g 'daemon off;'
       ;;
     *)
       echo "ERROR: unknown server command: ${1:-/not-supplied/}" 1>&2
