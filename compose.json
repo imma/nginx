@@ -3,7 +3,7 @@
   "networks": {
     "default": {
       "external": {
-        "name": "admin_default"
+        "name": "ubuntu_default"
       }
     }
   },
