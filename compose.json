@@ -9,6 +9,10 @@
   },
   "services": {
     "nginx": {
+      "environment": [
+        "SERVICE_2222_NAME=ssh",
+        "SERVICE_8888_NAME=docs"
+      ],
       "volumes": [
         "/data:/data",
         "/config:/config"
