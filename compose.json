@@ -32,7 +32,7 @@
         }
       },
       "dns": "172.28.128.1",
-      "dns_search": "dc1.node.consul",
+      "dns_search": "node.dc1.consul",
       "image": "${BLOCK_REGISTRY}/block:nginx",
       "hostname": "nginx"
      }
