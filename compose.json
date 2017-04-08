@@ -14,7 +14,6 @@
         "/config:/config"
       ],
       "environment": [
-        "SERVICE_2222_NAME=ssh",
         "SERVICE_8888_NAME=docs"
       ],
       "expose": [
@@ -26,15 +25,8 @@
       "cap_add": [
         "NET_ADMIN"
       ],
-      "networks": {
-        "default": {
-          "ipv4_address": "${NET_PREFIX}.6"
-        }
-      },
-      "dns": "172.28.128.1",
-      "dns_search": "node.dc1.consul",
-      "image": "${BLOCK_REGISTRY}/block:nginx",
-      "hostname": "nginx"
+      "dns_search": "node.dc1.consul service.dc1.consul",
+      "image": "${BLOCK_REGISTRY}/block:nginx"
      }
   }
 }
