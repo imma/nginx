@@ -11,6 +11,7 @@ function main {
   case "${1:-}" in
     default)
       mkdir -p /data/nginx/{log,run,html}
+      mkdir -p /data/nginx/logs
       exec nginx -c /config/nginx/nginx.conf -g 'daemon off;'
       ;;
     *)
